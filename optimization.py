@@ -47,9 +47,10 @@ param_grid = dict(max_features=parameter_max_features, n_estimators=n_estimators
 
 # Main content
 st.write("""
-# Machine Learning Hyperparameter Optimization App
-### (Heart Disease Classification)
+# Machine Learning Hyperparameter Optimization App for Design & Analysis
+### (Demonstrating using Heart Disease Calssification)
 """)
+st.subheader("Made by Mohammed Husamuddin")
 st.subheader('Dataset')
 st.markdown('The **Heart Disease** dataset is used as the example.')
 st.write(df.head(5))
