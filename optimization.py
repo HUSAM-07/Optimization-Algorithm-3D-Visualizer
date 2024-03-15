@@ -55,11 +55,7 @@ st.subheader('Dataset')
 st.markdown('The **Heart Disease** dataset is used as the example.')
 st.write(df.head(5))
 
-# Build Model button
-if st.button('Build Model'):
-    # Preprocessing
-    dataset = pd.get_dummies(df, columns=['sex', 'cp', 'fbs', 'restecg', 'exang', 'slope', 'ca', 'thal'])
-    model(dataset)
+
 
 # Model function
 def model(df):
@@ -118,6 +114,12 @@ def model(df):
                       width=800, height=800,
                       margin=dict(l=65, r=50, b=65, t=90))
     st.plotly_chart(fig)
+
+# Build Model button
+if st.button('Build Model'):
+    # Preprocessing
+    dataset = pd.get_dummies(df, columns=['sex', 'cp', 'fbs', 'restecg', 'exang', 'slope', 'ca', 'thal'])
+    model(dataset)
 
     # Classification Report
     st.subheader("Classification Report")
