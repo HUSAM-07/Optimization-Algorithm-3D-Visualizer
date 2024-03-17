@@ -139,3 +139,4 @@ if st.button('Build Model'):
     st.subheader("Confusion Matrix")
     plot_confusion_matrix(grid, X_test, Y_test, display_labels=['No disease', 'Has disease'])
     st.pyplot()
+    st.caption("Confusion matrix of the best model on the test data.")
